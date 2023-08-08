@@ -2,8 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import MyFirstComponent from './MyFirstComponent.jsx'
-import './index.css'
+import './index.css';
 
+import { BrowserRouter } from 'react-router-dom'
 
 import ExampleComponentCaller from './components/M6-Slide19-ExampleComponent-Caller.jsx'
 import WelcomeCaller from './components/M6-Slide21-Welcome-Caller.jsx'
@@ -31,6 +32,12 @@ import ReducerCounter from './components/M7-Slide21-ReducerCounter.jsx'
 import PostListReducer from './components/M7-Slide23-PostListReducer.jsx'
 import SubscribeForm from './components/M7-Slide29-SubscribeForm.jsx'
 import ActivityFinderCustomHook from './components/M7-Slide31-ActivityFinderCustomHook.jsx'
+import LoginFormUseContext from './components/M7-Slide39-LoginFromUseContext.jsx'
+
+import ContextProviderExample from './components/themecontext/ContextProviderExample'
+
+import { UserProvider } from './components/context/UserContext.jsx'
+import AppRoutes from './components/M7-Slide52-AppRouter.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -65,10 +72,23 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <PostListReducer />
       <SubscribeForm />
       <ActivityFinderCustomHook />
+      <LoginFormUseContext />
+
+      <UserProvider >
+        <LoginFormUseContext />
+      </UserProvider>
+
+      <ContextProviderExample/>
+
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+      
     */}
 
-    
-    <ActivityFinderCustomHook />
 
+      <ContextProviderExample/>
+    
+    
   </React.StrictMode>,
 )
