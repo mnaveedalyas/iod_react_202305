@@ -87,7 +87,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     */}
 
 
-      <ContextProviderExample/>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+      
     
     
   </React.StrictMode>,
